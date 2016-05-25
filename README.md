@@ -1,6 +1,6 @@
 # iVoLVER
 
-<img src="http://ivolver.cs.st-andrews.ac.uk/img/teaser.png" style="width:300px;box-shadow:rgba(0,0,0,0.3) 0 0 5px">
+<a href="http://ivolver.cs.st-andrews.ac.uk" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/teaser.png" style="width:300px;box-shadow:rgba(0,0,0,0.3) 0 0 5px"></a>
 
 iVoLVER is a tool that allows users to create visualizations without textual programming. It is designed to enable **flexible acquisition of many types of data** (text, colors, shapes, quantities, dates) from multiple source types (bitmap charts, webpages, photographs, SVGs, CSV files) and, within the same canvas, supports transformation of that data through simple widgets to construct interactive animated visuals.
 
@@ -8,9 +8,15 @@ Aside from the tool, which is web-based and designed for pen and touch, we contr
 
 ### Scenarios
 
-<a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" data-keyboard="true" data-toggle="modal"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/1.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank" data-keyboard="true" data-toggle="modal"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/2.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/3.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/4.png" width="24%"></a>
+<a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/1.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank" data-keyboard="true" data-toggle="modal"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/2.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/3.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/4.png" width="24%"></a>
 
 <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/5.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/6.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/8.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/4.png" width="24%"></a>
 
+### Source Code
 
-iVoLVER source code is 
+iVoLVER source code is available under the <a href="https://netbeans.org/" target="_blank">XXX license</a>.
+
+<a href="https://netbeans.org/" target="_blank">Netbeans</a>
+ 
+
+
