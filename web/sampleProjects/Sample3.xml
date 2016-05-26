@@ -1,0 +1,303 @@
+<iVoLVER_Canvas zoom="0.5363213305519103" panX="206.7867203921552" panY="-313.01931942030103">
+  <visualValue>
+    <left type="number">3176.4473031932057</left>
+    <top type="number">-276.308774740858</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:49+01:00</moment>
+    </value>
+  </visualValue>
+  <operator type="multiplication">
+    <left type="number">3192.2280238980065</left>
+    <top type="number">-49.4609146093438</top>
+    <value type="String"/>
+  </operator>
+  <operator type="multiplication">
+    <left type="number">3158.6939924003045</left>
+    <top type="number">487.0835893538897</top>
+    <value type="String"/>
+  </operator>
+  <visualValue>
+    <left type="number">3237.597595924309</left>
+    <top type="number">141.88032393636814</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:47+01:00</moment>
+    </value>
+  </visualValue>
+  <operator type="addition">
+    <left type="number">3125.1599609026025</left>
+    <top type="number">526.5353911158921</top>
+    <value type="String"/>
+  </operator>
+  <operator type="multiplication">
+    <left type="number">3294.802708479213</left>
+    <top type="number">911.1904582954162</top>
+    <value type="String"/>
+  </operator>
+  <operator type="division">
+    <left type="number">3387.5144426199186</left>
+    <top type="number">664.6166972829008</top>
+    <value type="String"/>
+  </operator>
+  <operator type="multiplication">
+    <left type="number">3174.4747131051054</left>
+    <top type="number">274.0438598390764</top>
+    <value type="String"/>
+  </operator>
+  <visualValue>
+    <left type="number">3006.804555616595</left>
+    <top type="number">-114.55638751664787</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <operator type="subtraction">
+    <left type="number">3056.119307819098</left>
+    <top type="number">181.33212569837062</top>
+    <value type="String"/>
+  </operator>
+  <operator type="addition">
+    <left type="number">2991.023834911794</left>
+    <top type="number">485.1109992657896</top>
+    <value type="String"/>
+  </operator>
+  <visualValue>
+    <left type="number">3065.9822582595984</left>
+    <top type="number">601.4938144636968</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:42+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">3024.557866409496</left>
+    <top type="number">911.1904582954162</top>
+    <value type="Shape">
+      <shape type="string">Circle</shape>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2659.628700110973</left>
+    <top type="number">-88.91271637134626</top>
+    <value type="Shape">
+      <shape type="string">Circle</shape>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2428.8356598032587</left>
+    <top type="number">163.5788149054695</top>
+    <value type="Color">
+      <color type="string">rgba(112,112,112,1)</color>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2203.960389759845</left>
+    <top type="number">341.1119228344806</top>
+    <value type="Color">
+      <color type="string">rgba(112,112,112,1)</color>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2233.5492410813467</left>
+    <top type="number">-86.94012628324614</top>
+    <value type="String">
+      <string type="string">A string</string>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2955.5172133259916</left>
+    <top type="number">135.96255367206777</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2929.87354218069</left>
+    <top type="number">611.3567649041975</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:36+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2756.2856144278794</left>
+    <top type="number">368.72818406788235</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2578.752506498868</left>
+    <top type="number">546.2612919968934</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2645.8205694942726</left>
+    <top type="number">666.589287371001</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:34+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2067.851673680936</left>
+    <top type="number">258.26313913427543</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2101.3857051786385</left>
+    <top type="number">640.9456162256994</top>
+    <value type="Duration">
+      <duration type="number">3661001</duration>
+      <outputUnits type="string">minutes</outputUnits>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2000.7836106855323</left>
+    <top type="number">-27.762423640242446</top>
+    <value type="String">
+      <string type="string">A string</string>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1898.2089261043259</left>
+    <top type="number">37.33304926706162</top>
+    <value type="Color">
+      <color type="string">rgba(112,112,112,1)</color>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1935.6881377782283</left>
+    <top type="number">325.33120212967964</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">2002.7562007736324</left>
+    <top type="number">518.6450307634917</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:29+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1829.1682730208215</left>
+    <top type="number">147.79809420066852</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1740.401719056316</left>
+    <top type="number">376.61854442028283</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1793.6616514350194</left>
+    <top type="number">623.1923054327982</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:28+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">826.109375</left>
+    <top type="number">225</top>
+    <value type="Duration">
+      <duration type="number">3661001</duration>
+      <outputUnits type="string">minutes</outputUnits>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1086.109375</left>
+    <top type="number">721</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:22+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">605.109375</left>
+    <top type="number">752</top>
+    <value type="String">
+      <string type="string">A string</string>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1038.109375</left>
+    <top type="number">505</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:20+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1456.109375</left>
+    <top type="number">73</top>
+    <value type="Shape">
+      <shape type="string">Circle</shape>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1069.109375</left>
+    <top type="number">838</top>
+    <value type="Color">
+      <color type="string">rgba(112,112,112,1)</color>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">878.109375</left>
+    <top type="number">351</top>
+    <value type="Duration">
+      <duration type="number">3661001</duration>
+      <outputUnits type="string">minutes</outputUnits>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1322.109375</left>
+    <top type="number">192</top>
+    <value type="String">
+      <string type="string">A string</string>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1462.109375</left>
+    <top type="number">671</top>
+    <value type="DateAndTime">
+      <moment type="string">2015-07-21T17:56:17+01:00</moment>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1363.109375</left>
+    <top type="number">372</top>
+    <value type="String">
+      <string type="string">A string</string>
+    </value>
+  </visualValue>
+  <visualValue>
+    <left type="number">1263.109375</left>
+    <top type="number">528</top>
+    <value type="Numeric">
+      <unscaledValue type="number">100</unscaledValue>
+    </value>
+  </visualValue>
+  <operator type="addition">
+    <left type="number">1355.109375</left>
+    <top type="number">786</top>
+    <value type="String"/>
+  </operator>
+  <operator type="subtraction">
+    <left type="number">982.109375</left>
+    <top type="number">599</top>
+    <value type="String"/>
+  </operator>
+  <operator type="multiplication">
+    <left type="number">1116.109375</left>
+    <top type="number">324</top>
+    <value type="String"/>
+  </operator>
+  <operator type="division">
+    <left type="number">461.109375</left>
+    <top type="number">525</top>
+    <value type="String"/>
+  </operator>
+</iVoLVER_Canvas>

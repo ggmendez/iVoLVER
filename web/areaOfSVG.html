@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SVG path area</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script>
+
+            var d = "M 100 100 L 300 100 L 200 300 z"; // Put here the d attribute of your SVG path
+            var svgPath = document.createElementNS('http://www.w3.org/2000/svg', "path");
+            svgPath.setAttributeNS(null, "d", d);
+            var result = pathToPolygon(svgPath, 500); // 500 means the number of points used to approximate this path with a polygon
+            var polygon = result.SVGPolygon;
+            var area = polyArea(polygon);
+            alert("The area of the path defined by the string \n\n      \"" + d + "\"\n\n is: " + area);
+
+            // Functions used in the code above
+
+            function pathToPolygon(path, samples) {
+                if (!samples)
+                    samples = 0;
+                var thePolygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+
+                // Put all path segments in a queue
+                for (var segs = [], s = path.pathSegList, i = s.numberOfItems - 1; i >= 0; --i)
+                    segs[i] = s.getItem(i);
+                var segments = segs.concat();
+
+                var seg, lastSeg, points = [], x, y;
+                var addSegmentPoint = function (s) {
+
+                    if (s.pathSegType == SVGPathSeg.PATHSEG_CLOSEPATH) {
+
+                    } else {
+                        if (s.pathSegType % 2 == 1 && s.pathSegType > 1) {
+                            // All odd-numbered path types are relative, except PATHSEG_CLOSEPATH (1)
+                            x += s.x;
+                            y += s.y;
+                        } else {
+                            x = s.x;
+                            y = s.y;
+                        }
+                        var lastPoint = points[points.length - 1];
+                        if (!lastPoint || x != lastPoint[0] || y != lastPoint[1]) {
+
+                            if (!isNaN(x) && !isNaN(y)) {
+                                points.push([x, y]);
+                            }
+
+                        }
+                    }
+                };
+
+                for (var d = 0, len = path.getTotalLength(), step = len / samples; d <= len; d += step) {
+
+                    if (step <= 0) {
+                        break;
+                    }
+
+                    var seg = segments[path.getPathSegAtLength(d)];
+                    var pt = path.getPointAtLength(d);
+                    if (seg != lastSeg) {
+                        lastSeg = seg;
+
+                        while (segs.length && segs[0] != seg) {
+                            addSegmentPoint(segs.shift());
+
+
+                        }
+
+
+
+                    }
+                    var lastPoint = points[points.length - 1];
+
+
+
+                    if (!lastPoint || pt.x != lastPoint[0] || pt.y != lastPoint[1]) {
+
+                        points.push([pt.x, pt.y]);
+                    }
+                }
+                for (var i = 0, len = segs.length; i < len; ++i) {
+                    addSegmentPoint(segs[i]);
+                }
+
+                var svgAbsolutePathString = "M ";
+                var xs = new Array();
+                var ys = new Array();
+
+                for (var i = 0, len = points.length; i < len; ++i) {
+
+                    var x = points[i][0];
+                    var y = points[i][1];
+
+                    if (typeof x !== 'undefined' && typeof y !== 'undefined') {
+                        xs.push(x);
+                        ys.push(y);
+                        svgAbsolutePathString += (x + "," + y + " L ");
+                    }
+
+
+                    points[i] = points[i].join(',');
+                }
+
+
+
+                var pointsString = points.join(' ');
+
+
+
+                thePolygon.setAttribute('points', pointsString);
+
+                svgAbsolutePathString = svgAbsolutePathString.substr(0, svgAbsolutePathString.length - 2);
+
+                return {SVGPolygon: thePolygon, svgAbsolutePathString: svgAbsolutePathString, xs: xs, ys: ys};
+            }
+
+            function polyArea(poly) {
+                var area = 0, pts = poly.points, len = pts.numberOfItems;
+                for (var i = 0; i < len; ++i) {
+                    var p1 = pts.getItem(i), p2 = pts.getItem((i + len - 1) % len);
+                    area += (p2.x + p1.x) * (p2.y - p1.y);
+                }
+                return Math.abs(area / 2);
+            }
+
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

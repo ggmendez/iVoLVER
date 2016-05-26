@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html style="overflow-x: no-display;">
+    <head>
+        <title>Tests</title>
+
+        <script type="text/javascript" src="./js/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="./js/jquery-ui-1.10.4/js/jquery.ajaxfileupload.js"></script>        
+        <script type="text/javascript" src="./js/jquery-ui-1.10.4/js/jquery-ui-1.10.4.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-ui-1.10.4/js/jquery.path.js"></script>
+        <script type="text/javascript" src="./js/kickstart.js"></script>
+        <script type="text/javascript" src="./fabric.js-1.4.12/dist/fabric.js"></script>
+        <script type="text/javascript" src="./js/moment.js"></script>
+        <script type="text/javascript" src="./js/alertify.js-0.3.11/lib/alertify.js"></script>
+        <script type="text/javascript" src="./js/jquery.ui.touch-punch.min.js"></script>
+
+        <script type="text/javascript" src="./js/globals.js"></script>
+        <script type="text/javascript" src="./js/util/generalFunctions.js"></script>
+        <script type="text/javascript" src="./js/project/Project.js"></script>
+        <script type="text/javascript" src="./js/interaction/canvasEvents.js"></script>
+        <script type="text/javascript" src="./js/interaction/objectsEvents.js"></script>
+        <script type="text/javascript" src="./js/interaction/widgetsEvents.js"></script>
+        <script type="text/javascript" src="./js/interaction/blobsCounter.js"></script>
+
+        <script type="text/javascript" src="./js/tooltipster/js/jquery.tooltipster.js"></script>
+        <script type="text/javascript" src="./js/hammer.js/hammer.js"></script>
+        <script type="text/javascript" src="./js/jsts/javascript.util.js"></script>
+        <script type="text/javascript" src="./js/jsts/jsts.js"></script>        
+        <script type="text/javascript" src="./js/simplify.js/simplify.js"></script>
+        <script type="text/javascript" src="./js/classes/operators/Operator.js"></script>
+        <script type="text/javascript" src="./js/classes/operators/AdditionOperator.js"></script>
+        <script type="text/javascript" src="./js/classes/operators/SubtractionOperator.js"></script>
+        <script type="text/javascript" src="./js/classes/operators/MultiplicationOperator.js"></script>
+        <script type="text/javascript" src="./js/classes/operators/DivisionOperator.js"></script>
+        <script type="text/javascript" src="./js/classes/Connector.js"></script>
+        <script type="text/javascript" src="./js/classes/iconPaths.js"></script>
+        <script type="text/javascript" src="./js/classes/VisualProperty.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/Mark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/EllipticMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/CircularMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/SquaredMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/RectangularMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/FatFontMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/SVGPathGroupMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/SVGPathMark.js"></script>
+        <script type="text/javascript" src="./js/classes/marks/PathMark.js"></script>
+        <script type="text/javascript" src="js/classes/extractors/Extractor.js"></script>
+        <script type="text/javascript" src="js/classes/extractors/SVGPathExtractor.js"></script>
+        <script type="text/javascript" src="js/classes/extractors/SamplerExtractor.js"></script>
+        <script type="text/javascript" src="js/classes/extractors/TextualExtractor.js"></script>
+        <script type="text/javascript" src="./js/classes/TextInput.js"></script>
+        <script type="text/javascript" src="./js/classes/FreeSelection.js"></script>
+        <script type="text/javascript" src="./js/classes/Player.js"></script>        
+        <script type="text/javascript" src="./js/classes/LabeledRect.js"></script>
+        <script type="text/javascript" src="./js/classes/DataWidget.js"></script>
+        <script type="text/javascript" src="./js/classes/Aggregator.js"></script>
+        <script type="text/javascript" src="./js/classes/Locator.js"></script>
+        <script type="text/javascript" src="./js/classes/types/Value.js"></script>
+        <script type="text/javascript" src="./js/classes/types/VisualValue.js"></script>
+        <script type="text/javascript" src="./js/classes/types/NumericData.js"></script>
+        <script type="text/javascript" src="./js/classes/types/StringData.js"></script>
+        <script type="text/javascript" src="./js/classes/types/DateAndTimeData.js"></script>
+        <script type="text/javascript" src="./js/classes/types/DurationData.js"></script>
+        <script type="text/javascript" src="./js/classes/types/ColorData.js"></script>
+        <script type="text/javascript" src="./js/classes/types/ShapeData.js"></script>
+        <script type="text/javascript" src="./js/js-quantities/src/quantities.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/CollectionGetter.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/CollectionAttributeSelector.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/Mapper.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/VerticalCollection.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumericCollectionGenerator.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/MapperInput.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/MapperOutput.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumberGenerator.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumberGeneratorOutput.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumericFunction.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumericFunctionInput.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/NumericFunctionOutput.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/FunctionDrawingCanvas.js"></script>
+        <script type="text/javascript" src="./js/classes/functions/FunctionValuesCollection.js"></script>
+        <script type="text/javascript" src="./js/colors.js"></script>
+        <script type="text/javascript" src="./js/jsGradient.js"></script>
+        <script type="text/javascript" src="./js/PapaParse/papaparse.min.js"></script>
+        <script type="text/javascript" src="./js/FileSaver/FileSaver.min.js"></script>
+        <script type="text/javascript" src="./js/mathjs/dist/math.min.js"></script>
+        <script type="text/javascript" src="./js/colormix-1.0.0.min.js"></script>
+        <script type="text/javascript" src="./js/webcamjs/webcam.js"></script>
+        <script type="text/javascript" src="./js/h5utils.js"></script>
+        <script type="text/javascript" src="./js/jquery.xdomainajax.js"></script>
+        <script type="text/javascript" src="./js/resizeEvents/jquery.resize.js"></script>
+        <script type="text/javascript" src="./js/jquery.drag.resize.js"></script>
+
+        <script type="text/javascript" src="./js/vkbeautify.0.99.00.beta.js"></script>
+
+
+
+    </head>
+
+    <body>
+
+        <div id="canvasContainer">
+            <canvas id="theCanvas"></canvas>
+        </div>
+
+        <script type="text/javascript">
+
+            var canvas = new fabric.Canvas('theCanvas', {backgroundColor: "#ffffff", renderOnAddRemove: false});
+
+            /*var numericValue = createNumericValue(150, 'kilo', 'nano', 'meters');
+//            var numericValue = createNumericValue(150);
+//            printXML(numericValue);            
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(numericValue.toXML()));
+
+            var dateAndTimeValue = createDateAndTimeValue(moment());
+//            printXML(dateAndTimeValue);
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(dateAndTimeValue.toXML()));
+
+            var stringValue = createStringValue("This is a string");
+//            printXML(stringValue);
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(stringValue.toXML()));
+
+            var colorValue = createColorValue(new fabric.Color("red"));
+//            printXML(colorValue);
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(colorValue.toXML()));
+
+            var durationValue = createDurationValue(moment.duration({hours: 72}), "days");
+//            printXML(durationValue);
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(durationValue.toXML()));
+
+            var shapeValue = createShapeValue(CIRCULAR_MARK);
+//            printXML(shapeValue);
+            console.log("createdValue:");
+            console.log(createValueFromXMLNode(shapeValue.toXML()));*/
+            
+            
+
+            /*var visualValue = CreateVisualValueFromValue(stringValue, 400, 250);
+            visualValue.top = -100;
+            visualValue.left = 0;
+            printXML(visualValue);*/
+
+
+            var options = {
+             left: 400,
+             top: 100,
+             fill: rgb(255, 151, 40),
+             stroke: darkenrgb(255, 151, 40),
+             area: 12000,
+             label: 'A square',
+             markAsSelected: false,
+             animateAtBirth: true
+             };
+             var rectangularMark = new RectangularMark(options);
+//             printXML(rectangularMark);
+             createMarkFromXMLNode(rectangularMark.toXML());
+             
+             
+             
+             /*var circularMark = new CircularMark(options);
+             printXML(circularMark);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+
+    </body>
+
+</html>

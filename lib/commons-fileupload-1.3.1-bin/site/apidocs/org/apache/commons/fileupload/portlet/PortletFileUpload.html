@@ -1,0 +1,452 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>
+PortletFileUpload (Apache Commons FileUpload 1.3.1 API)
+</TITLE>
+
+<META NAME="keywords" CONTENT="org.apache.commons.fileupload.portlet.PortletFileUpload class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="PortletFileUpload (Apache Commons FileUpload 1.3.1 API)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PortletFileUpload.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletRequestContext.html" title="class in org.apache.commons.fileupload.portlet"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?org/apache/commons/fileupload/portlet/PortletFileUpload.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PortletFileUpload.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_org.apache.commons.fileupload.FileUploadBase">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_org.apache.commons.fileupload.FileUploadBase">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+org.apache.commons.fileupload.portlet</FONT>
+<BR>
+Class PortletFileUpload</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html" title="class in org.apache.commons.fileupload">org.apache.commons.fileupload.FileUploadBase</A>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html" title="class in org.apache.commons.fileupload">org.apache.commons.fileupload.FileUpload</A>
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>org.apache.commons.fileupload.portlet.PortletFileUpload</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>PortletFileUpload</B><DT>extends <A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html" title="class in org.apache.commons.fileupload">FileUpload</A></DL>
+</PRE>
+
+<P>
+<p>High level API for processing file uploads.</p>
+
+ <p>This class handles multiple files per single HTML widget, sent using
+ <code>multipart/mixed</code> encoding type, as specified by
+ <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>.  Use
+ <A HREF="../../../../../org/apache/commons/fileupload/servlet/ServletFileUpload.html" title="class in org.apache.commons.fileupload.servlet"><CODE>#parseRequest(javax.servlet.http.HttpServletRequest)</CODE></A> to acquire a list
+ of <A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload"><CODE>FileItems</CODE></A> associated
+ with a given HTML widget.</p>
+
+ <p>How the data for individual parts is stored is determined by the factory
+ used to create them; a given part may be in memory, on disk, or somewhere
+ else.</p>
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>FileUpload 1.1</DD>
+<DT><B>Version:</B></DT>
+  <DD>$Id: PortletFileUpload.java 1455537 2013-03-12 14:06:11Z simonetripodi $</DD>
+</DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_org.apache.commons.fileupload.FileUploadBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from class org.apache.commons.fileupload.<A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html" title="class in org.apache.commons.fileupload">FileUploadBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.FileSizeLimitExceededException.html" title="class in org.apache.commons.fileupload">FileUploadBase.FileSizeLimitExceededException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.FileUploadIOException.html" title="class in org.apache.commons.fileupload">FileUploadBase.FileUploadIOException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.InvalidContentTypeException.html" title="class in org.apache.commons.fileupload">FileUploadBase.InvalidContentTypeException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.IOFileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadBase.IOFileUploadException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.SizeException.html" title="class in org.apache.commons.fileupload">FileUploadBase.SizeException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.SizeLimitExceededException.html" title="class in org.apache.commons.fileupload">FileUploadBase.SizeLimitExceededException</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.UnknownSizeException.html" title="class in org.apache.commons.fileupload">FileUploadBase.UnknownSizeException</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_org.apache.commons.fileupload.FileUploadBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class org.apache.commons.fileupload.<A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html" title="class in org.apache.commons.fileupload">FileUploadBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#ATTACHMENT">ATTACHMENT</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#CONTENT_DISPOSITION">CONTENT_DISPOSITION</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#CONTENT_LENGTH">CONTENT_LENGTH</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#CONTENT_TYPE">CONTENT_TYPE</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#FORM_DATA">FORM_DATA</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#MAX_HEADER_SIZE">MAX_HEADER_SIZE</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#MULTIPART">MULTIPART</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#MULTIPART_FORM_DATA">MULTIPART_FORM_DATA</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#MULTIPART_MIXED">MULTIPART_MIXED</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#PortletFileUpload()">PortletFileUpload</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an uninitialised instance of this class.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#PortletFileUpload(org.apache.commons.fileupload.FileItemFactory)">PortletFileUpload</A></B>(<A HREF="../../../../../org/apache/commons/fileupload/FileItemFactory.html" title="interface in org.apache.commons.fileupload">FileItemFactory</A>&nbsp;fileItemFactory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of this class which uses the supplied factory to
+ create <code>FileItem</code> instances.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/FileItemIterator.html" title="interface in org.apache.commons.fileupload">FileItemIterator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#getItemIterator(javax.portlet.ActionRequest)">getItemIterator</A></B>(javax.portlet.ActionRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#isMultipartContent(javax.portlet.ActionRequest)">isMultipartContent</A></B>(javax.portlet.ActionRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utility method that determines whether the request contains multipart
+ content.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A>&gt;&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#parseParameterMap(javax.portlet.ActionRequest)">parseParameterMap</A></B>(javax.portlet.ActionRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletFileUpload.html#parseRequest(javax.portlet.ActionRequest)">parseRequest</A></B>(javax.portlet.ActionRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.apache.commons.fileupload.FileUpload"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.apache.commons.fileupload.<A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html" title="class in org.apache.commons.fileupload">FileUpload</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html#getFileItemFactory()">getFileItemFactory</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html#setFileItemFactory(org.apache.commons.fileupload.FileItemFactory)">setFileItemFactory</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.apache.commons.fileupload.FileUploadBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.apache.commons.fileupload.<A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html" title="class in org.apache.commons.fileupload">FileUploadBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#createItem(java.util.Map, boolean)">createItem</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getBoundary(java.lang.String)">getBoundary</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getFieldName(org.apache.commons.fileupload.FileItemHeaders)">getFieldName</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getFieldName(java.util.Map)">getFieldName</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getFileName(org.apache.commons.fileupload.FileItemHeaders)">getFileName</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getFileName(java.util.Map)">getFileName</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getFileSizeMax()">getFileSizeMax</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getHeader(java.util.Map, java.lang.String)">getHeader</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getHeaderEncoding()">getHeaderEncoding</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getItemIterator(org.apache.commons.fileupload.RequestContext)">getItemIterator</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getParsedHeaders(java.lang.String)">getParsedHeaders</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getProgressListener()">getProgressListener</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#getSizeMax()">getSizeMax</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#isMultipartContent(javax.servlet.http.HttpServletRequest)">isMultipartContent</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#isMultipartContent(org.apache.commons.fileupload.RequestContext)">isMultipartContent</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#newFileItemHeaders()">newFileItemHeaders</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#parseHeaders(java.lang.String)">parseHeaders</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#parseParameterMap(org.apache.commons.fileupload.RequestContext)">parseParameterMap</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#parseRequest(javax.servlet.http.HttpServletRequest)">parseRequest</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#parseRequest(org.apache.commons.fileupload.RequestContext)">parseRequest</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#setFileSizeMax(long)">setFileSizeMax</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#setHeaderEncoding(java.lang.String)">setHeaderEncoding</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#setProgressListener(org.apache.commons.fileupload.ProgressListener)">setProgressListener</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileUploadBase.html#setSizeMax(long)">setSizeMax</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PortletFileUpload()"><!-- --></A><H3>
+PortletFileUpload</H3>
+<PRE>
+public <B>PortletFileUpload</B>()</PRE>
+<DL>
+<DD>Constructs an uninitialised instance of this class. A factory must be
+ configured, using <code>setFileItemFactory()</code>, before attempting
+ to parse requests.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html#FileUpload(org.apache.commons.fileupload.FileItemFactory)"><CODE>FileUpload.FileUpload(FileItemFactory)</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="PortletFileUpload(org.apache.commons.fileupload.FileItemFactory)"><!-- --></A><H3>
+PortletFileUpload</H3>
+<PRE>
+public <B>PortletFileUpload</B>(<A HREF="../../../../../org/apache/commons/fileupload/FileItemFactory.html" title="interface in org.apache.commons.fileupload">FileItemFactory</A>&nbsp;fileItemFactory)</PRE>
+<DL>
+<DD>Constructs an instance of this class which uses the supplied factory to
+ create <code>FileItem</code> instances.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>fileItemFactory</CODE> - The factory to use for creating file items.<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/FileUpload.html#FileUpload()"><CODE>FileUpload.FileUpload()</CODE></A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isMultipartContent(javax.portlet.ActionRequest)"><!-- --></A><H3>
+isMultipartContent</H3>
+<PRE>
+public static final boolean <B>isMultipartContent</B>(javax.portlet.ActionRequest&nbsp;request)</PRE>
+<DL>
+<DD>Utility method that determines whether the request contains multipart
+ content.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - The portlet request to be evaluated. Must be non-null.
+<DT><B>Returns:</B><DD><code>true</code> if the request is multipart;
+         <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseRequest(javax.portlet.ActionRequest)"><!-- --></A><H3>
+parseRequest</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A>&gt; <B>parseRequest</B>(javax.portlet.ActionRequest&nbsp;request)
+                            throws <A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A></PRE>
+<DL>
+<DD>Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - The portlet request to be parsed.
+<DT><B>Returns:</B><DD>A list of <code>FileItem</code> instances parsed from the
+         request, in the order that they were transmitted.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A></CODE> - if there are problems reading/parsing
+                             the request or storing files.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseParameterMap(javax.portlet.ActionRequest)"><!-- --></A><H3>
+parseParameterMap</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A>&gt;&gt; <B>parseParameterMap</B>(javax.portlet.ActionRequest&nbsp;request)
+                                             throws <A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A></PRE>
+<DL>
+<DD>Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - The portlet request to be parsed.
+<DT><B>Returns:</B><DD>A map of <code>FileItem</code> instances parsed from the request.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A></CODE> - if there are problems reading/parsing
+                             the request or storing files.<DT><B>Since:</B></DT>
+  <DD>1.3</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getItemIterator(javax.portlet.ActionRequest)"><!-- --></A><H3>
+getItemIterator</H3>
+<PRE>
+public <A HREF="../../../../../org/apache/commons/fileupload/FileItemIterator.html" title="interface in org.apache.commons.fileupload">FileItemIterator</A> <B>getItemIterator</B>(javax.portlet.ActionRequest&nbsp;request)
+                                 throws <A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A>,
+                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Processes an <a href="http://www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>
+ compliant <code>multipart/form-data</code> stream.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - The portlet request to be parsed.
+<DT><B>Returns:</B><DD>An iterator to instances of <code>FileItemStream</code>
+         parsed from the request, in the order that they were
+         transmitted.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileUploadException.html" title="class in org.apache.commons.fileupload">FileUploadException</A></CODE> - if there are problems reading/parsing
+                             the request or storing files.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></CODE> - An I/O error occurred. This may be a network
+   error while communicating with the client or a problem while
+   storing the uploaded content.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PortletFileUpload.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/portlet/PortletRequestContext.html" title="class in org.apache.commons.fileupload.portlet"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?org/apache/commons/fileupload/portlet/PortletFileUpload.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PortletFileUpload.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_org.apache.commons.fileupload.FileUploadBase">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_org.apache.commons.fileupload.FileUploadBase">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+Copyright &#169; 2002&#x2013;2014 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.
+</BODY>
+</HTML>

@@ -1,0 +1,34 @@
+{
+    "name": "jquery-filechooser",
+    "version": "0.0.1",
+    "title": "jQuery File Chooser",
+    "description": "jQuery plugin to add some behaviours to a custom designed file chooser",
+    "keywords": [
+        "jquery",
+        "file",
+        "input",
+        "filetype"
+    ],
+    "homepage": "https://github.com/kulor/jquery.fileChooser",
+    "author": {
+        "name": "James Broad",
+        "url": "http://kulor.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:kulor/jquery.fileChooser.git"
+    },
+    "bugs": "https://github.com/kulor/jquery.fileChooser/issues",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6"
+    },
+    "main": [
+        "jquery.fileChooser.js"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "simplify-js",
+  "version": "1.2.1",
+  "description": "A high-performance JavaScript 2D/3D polyline simplification library",
+  "homepage": "http://mourner.github.com/simplify-js/",
+  "author": "Vladimir Agafonkin",
+  "keywords": [
+    "math",
+    "geometry",
+    "polyline",
+    "simplification"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mourner/simplify-js.git"
+  },
+  "main": "simplify.js",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^2.12.3",
+    "jshint": "^2.5.0"
+  },
+  "scripts": {
+    "test": "jshint simplify.js test.js && node test.js | faucet"
+  },
+  "jshintConfig": {
+    "quotmark": "single",
+    "trailing": true,
+    "unused": true
+  }
+}

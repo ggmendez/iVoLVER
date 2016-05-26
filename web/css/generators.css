@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'generatorIcons';
+	src:url('fonts/generatorIcons.eot?-u8il5z');
+	src:url('fonts/generatorIcons.eot?#iefix-u8il5z') format('embedded-opentype'),
+		url('fonts/generatorIcons.woff?-u8il5z') format('woff'),
+		url('fonts/generatorIcons.ttf?-u8il5z') format('truetype'),
+		url('fonts/generatorIcons.svg?-u8il5z#generatorIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="generator-"], [class*=" generator-"] {
+	font-family: 'generatorIcons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+    font-size: 30px;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.generator-number:before {
+	content: "\e1500";
+}
+

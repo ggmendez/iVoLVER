@@ -1,0 +1,28 @@
+{
+  "name": "js-quantities",
+  "version": "1.5.0",
+  "description": "JavaScript library for quantity calculation and unit conversion",
+  "main": "./src/quantities.js",
+  "keywords": [
+    "quantity",
+    "quantities",
+    "units",
+    "physical"
+  ],
+  "authors": [
+    "Julien Sanchez <julien.sanchez@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://gentooboontoo.github.io/js-quantities/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bench",
+    "Gemfile*",
+    "lib",
+    "Rakefile",
+    "spec",
+    "SpecRunner.html"
+  ]
+}

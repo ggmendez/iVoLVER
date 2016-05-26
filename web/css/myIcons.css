@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?1fc333');
+    src:url('fonts/icomoon.eot?#iefix1fc333') format('embedded-opentype'),
+        url('fonts/icomoon.woff?1fc333') format('woff'),
+        url('fonts/icomoon.ttf?1fc333') format('truetype'),
+        url('fonts/icomoon.svg?1fc333#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="myicon-"], [class*=" myicon-"] {
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+
+    /* sprites.less reset */
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    margin-top: 0;
+}
+
+.myicon-uniE600:before {
+    content: "\e600";
+    font-weight: normal;
+    vertical-align: -10%;
+    font-size: 1.65em;
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none;
+    margin-right: 10px;
+}

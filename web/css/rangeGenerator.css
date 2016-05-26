@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'rangeGenerator';
+	src:url('fonts/rangeGenerator.eot?-h1y5m9');
+	src:url('fonts/rangeGenerator.eot?#iefix-h1y5m9') format('embedded-opentype'),
+		url('fonts/rangeGenerator.ttf?-h1y5m9') format('truetype'),
+		url('fonts/rangeGenerator.woff?-h1y5m9') format('woff'),
+		url('fonts/rangeGenerator.svg?-h1y5m9#rangeGenerator') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="range-"], [class*=" range-"] {
+	font-family: 'rangeGenerator';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.range-generator:before {
+	content: "\e6000";
+}

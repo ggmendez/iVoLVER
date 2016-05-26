@@ -1,0 +1,957 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>
+DiskFileItem (Apache Commons FileUpload 1.3.1 API)
+</TITLE>
+
+<META NAME="keywords" CONTENT="org.apache.commons.fileupload.disk.DiskFileItem class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="DiskFileItem (Apache Commons FileUpload 1.3.1 API)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DiskFileItem.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItemFactory.html" title="class in org.apache.commons.fileupload.disk"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?org/apache/commons/fileupload/disk/DiskFileItem.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DiskFileItem.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+org.apache.commons.fileupload.disk</FONT>
+<BR>
+Class DiskFileItem</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>org.apache.commons.fileupload.disk.DiskFileItem</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/Serializable.html" title="class or interface in java.io">Serializable</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A>, <A HREF="../../../../../org/apache/commons/fileupload/FileItemHeadersSupport.html" title="interface in org.apache.commons.fileupload">FileItemHeadersSupport</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../org/apache/commons/fileupload/DefaultFileItem.html" title="class in org.apache.commons.fileupload">DefaultFileItem</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>DiskFileItem</B><DT>extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></DL>
+</PRE>
+
+<P>
+<p> The default implementation of the
+ <A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload"><CODE>FileItem</CODE></A> interface.
+
+ <p> After retrieving an instance of this class from a <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItemFactory.html" title="class in org.apache.commons.fileupload.disk"><CODE>DiskFileItemFactory</CODE></A> instance (see
+ <A HREF="../../../../../org/apache/commons/fileupload/servlet/ServletFileUpload.html" title="class in org.apache.commons.fileupload.servlet"><CODE>#parseRequest(javax.servlet.http.HttpServletRequest)</CODE></A>), you may
+ either request all contents of file at once using <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#get()"><CODE>get()</CODE></A> or
+ request an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io"><CODE>InputStream</CODE></A> with
+ <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getInputStream()"><CODE>getInputStream()</CODE></A> and process the file without attempting to load
+ it into memory, which may come handy with large files.
+
+ <p>Temporary files, which are created for file items, should be
+ deleted later on. The best way to do this is using a
+ <CODE>FileCleaningTracker</CODE>, which you can set on the
+ <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItemFactory.html" title="class in org.apache.commons.fileupload.disk"><CODE>DiskFileItemFactory</CODE></A>. However, if you do use such a tracker,
+ then you must consider the following: Temporary files are automatically
+ deleted as soon as they are no longer needed. (More precisely, when the
+ corresponding instance of <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> is garbage collected.)
+ This is done by the so-called reaper thread, which is started and stopped
+ automatically by the <CODE>FileCleaningTracker</CODE> when
+ there are files to be tracked.
+ It might make sense to terminate that thread, for example, if
+ your web application ends. See the section on "Resource cleanup"
+ in the users guide of commons-fileupload.</p>
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>FileUpload 1.1</DD>
+<DT><B>Version:</B></DT>
+  <DD>$Id: DiskFileItem.java 1565192 2014-02-06 12:14:16Z markt $</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../serialized-form.html#org.apache.commons.fileupload.disk.DiskFileItem">Serialized Form</A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#DEFAULT_CHARSET">DEFAULT_CHARSET</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default content charset to be used when no explicit charset
+ parameter is provided by the sender.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#DiskFileItem(java.lang.String, java.lang.String, boolean, java.lang.String, int, java.io.File)">DiskFileItem</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fieldName,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;contentType,
+             boolean&nbsp;isFormField,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fileName,
+             int&nbsp;sizeThreshold,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A>&nbsp;repository)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new <code>DiskFileItem</code> instance.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#delete()">delete</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes the underlying storage for a file item, including deleting any
+ associated temporary disk file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the file contents from the temporary storage.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#get()">get</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the contents of the file as an array of bytes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getCharSet()">getCharSet</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the content charset passed by the agent or <code>null</code> if
+ not defined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getContentType()">getContentType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the content type passed by the agent or <code>null</code> if
+ not defined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getFieldName()">getFieldName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the field in the multipart form corresponding to
+ this file item.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/FileItemHeaders.html" title="interface in org.apache.commons.fileupload">FileItemHeaders</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getHeaders()">getHeaders</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the file item headers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io">InputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getInputStream()">getInputStream</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io"><CODE>InputStream</CODE></A> that can be
+ used to retrieve the contents of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the original filename in the client's filesystem.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html" title="class or interface in java.io">OutputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getOutputStream()">getOutputStream</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html" title="class or interface in java.io"><CODE>OutputStream</CODE></A> that can
+ be used for storing the contents of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getSize()">getSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the size of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getStoreLocation()">getStoreLocation</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> object for the <code>FileItem</code>'s
+ data's temporary location on the disk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getString()">getString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the contents of the file as a String, using the default
+ character encoding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getString(java.lang.String)">getString</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;charset)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the contents of the file as a String, using the specified
+ encoding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getTempFile()">getTempFile</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates and returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> representing a uniquely
+ named temporary file in the configured repository path.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#isFormField()">isFormField</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether or not a <code>FileItem</code> instance represents
+ a simple form field.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#isInMemory()">isInMemory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides a hint as to whether or not the file contents will be read
+ from memory.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#setFieldName(java.lang.String)">setFieldName</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fieldName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the field name used to reference this file item.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#setFormField(boolean)">setFormField</A></B>(boolean&nbsp;state)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether or not a <code>FileItem</code> instance represents
+ a simple form field.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#setHeaders(org.apache.commons.fileupload.FileItemHeaders)">setHeaders</A></B>(<A HREF="../../../../../org/apache/commons/fileupload/FileItemHeaders.html" title="interface in org.apache.commons.fileupload">FileItemHeaders</A>&nbsp;pHeaders)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the file item headers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a string representation of this object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#write(java.io.File)">write</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A convenience method to write an uploaded item to disk.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DEFAULT_CHARSET"><!-- --></A><H3>
+DEFAULT_CHARSET</H3>
+<PRE>
+public static final <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>DEFAULT_CHARSET</B></PRE>
+<DL>
+<DD>Default content charset to be used when no explicit charset
+ parameter is provided by the sender. Media subtypes of the
+ "text" type are defined to have a default charset value of
+ "ISO-8859-1" when received via HTTP.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#org.apache.commons.fileupload.disk.DiskFileItem.DEFAULT_CHARSET">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DiskFileItem(java.lang.String, java.lang.String, boolean, java.lang.String, int, java.io.File)"><!-- --></A><H3>
+DiskFileItem</H3>
+<PRE>
+public <B>DiskFileItem</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fieldName,
+                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;contentType,
+                    boolean&nbsp;isFormField,
+                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fileName,
+                    int&nbsp;sizeThreshold,
+                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A>&nbsp;repository)</PRE>
+<DL>
+<DD>Constructs a new <code>DiskFileItem</code> instance.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>fieldName</CODE> - The name of the form field.<DD><CODE>contentType</CODE> - The content type passed by the browser or
+                      <code>null</code> if not specified.<DD><CODE>isFormField</CODE> - Whether or not this item is a plain form field, as
+                      opposed to a file upload.<DD><CODE>fileName</CODE> - The original filename in the user's filesystem, or
+                      <code>null</code> if not specified.<DD><CODE>sizeThreshold</CODE> - The threshold, in bytes, below which items will be
+                      retained in memory and above which they will be
+                      stored as a file.<DD><CODE>repository</CODE> - The data repository, which is the directory in
+                      which files will be created, should the item size
+                      exceed the threshold.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getInputStream()"><!-- --></A><H3>
+getInputStream</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io">InputStream</A> <B>getInputStream</B>()
+                           throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io"><CODE>InputStream</CODE></A> that can be
+ used to retrieve the contents of the file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getInputStream()">getInputStream</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/InputStream.html" title="class or interface in java.io"><CODE>InputStream</CODE></A> that can be
+         used to retrieve the contents of the file.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></CODE> - if an error occurs.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getContentType()"><!-- --></A><H3>
+getContentType</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getContentType</B>()</PRE>
+<DL>
+<DD>Returns the content type passed by the agent or <code>null</code> if
+ not defined.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getContentType()">getContentType</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The content type passed by the agent or <code>null</code> if
+         not defined.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCharSet()"><!-- --></A><H3>
+getCharSet</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getCharSet</B>()</PRE>
+<DL>
+<DD>Returns the content charset passed by the agent or <code>null</code> if
+ not defined.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The content charset passed by the agent or <code>null</code> if
+         not defined.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getName</B>()</PRE>
+<DL>
+<DD>Returns the original filename in the client's filesystem.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getName()">getName</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The original filename in the client's filesystem.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/InvalidFileNameException.html" title="class in org.apache.commons.fileupload">InvalidFileNameException</A></CODE> - The file name contains a NUL character,
+   which might be an indicator of a security attack. If you intend to
+   use the file name anyways, catch the exception and use
+   <A HREF="../../../../../org/apache/commons/fileupload/InvalidFileNameException.html#getName()"><CODE>InvalidFileNameException.getName()</CODE></A>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isInMemory()"><!-- --></A><H3>
+isInMemory</H3>
+<PRE>
+public boolean <B>isInMemory</B>()</PRE>
+<DL>
+<DD>Provides a hint as to whether or not the file contents will be read
+ from memory.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#isInMemory()">isInMemory</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the file contents will be read
+         from memory; <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSize()"><!-- --></A><H3>
+getSize</H3>
+<PRE>
+public long <B>getSize</B>()</PRE>
+<DL>
+<DD>Returns the size of the file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getSize()">getSize</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The size of the file, in bytes.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get()"><!-- --></A><H3>
+get</H3>
+<PRE>
+public byte[] <B>get</B>()</PRE>
+<DL>
+<DD>Returns the contents of the file as an array of bytes.  If the
+ contents of the file were not yet cached in memory, they will be
+ loaded from the disk storage and cached.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#get()">get</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The contents of the file as an array of bytes.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getString(java.lang.String)"><!-- --></A><H3>
+getString</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getString</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;charset)
+                 throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/UnsupportedEncodingException.html" title="class or interface in java.io">UnsupportedEncodingException</A></PRE>
+<DL>
+<DD>Returns the contents of the file as a String, using the specified
+ encoding.  This method uses <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#get()"><CODE>get()</CODE></A> to retrieve the
+ contents of the file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getString(java.lang.String)">getString</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>charset</CODE> - The charset to use.
+<DT><B>Returns:</B><DD>The contents of the file, as a string.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/UnsupportedEncodingException.html" title="class or interface in java.io">UnsupportedEncodingException</A></CODE> - if the requested character
+                                      encoding is not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getString()"><!-- --></A><H3>
+getString</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getString</B>()</PRE>
+<DL>
+<DD>Returns the contents of the file as a String, using the default
+ character encoding.  This method uses <A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#get()"><CODE>get()</CODE></A> to retrieve the
+ contents of the file.
+
+ <b>TODO</b> Consider making this method throw UnsupportedEncodingException.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getString()">getString</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The contents of the file, as a string.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="write(java.io.File)"><!-- --></A><H3>
+write</H3>
+<PRE>
+public void <B>write</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A>&nbsp;file)
+           throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="class or interface in java.lang">Exception</A></PRE>
+<DL>
+<DD>A convenience method to write an uploaded item to disk. The client code
+ is not concerned with whether or not the item is stored in memory, or on
+ disk in a temporary location. They just want to write the uploaded item
+ to a file.
+ <p>
+ This implementation first attempts to rename the uploaded item to the
+ specified destination file, if the item was originally written to disk.
+ Otherwise, the data will be copied to the specified file.
+ <p>
+ This method is only guaranteed to work <em>once</em>, the first time it
+ is invoked for a particular item. This is because, in the event that the
+ method renames a temporary file, that file will no longer be available
+ to copy or rename again at a later time.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#write(java.io.File)">write</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>file</CODE> - The <code>File</code> into which the uploaded item should
+             be stored.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="class or interface in java.lang">Exception</A></CODE> - if an error occurs.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="delete()"><!-- --></A><H3>
+delete</H3>
+<PRE>
+public void <B>delete</B>()</PRE>
+<DL>
+<DD>Deletes the underlying storage for a file item, including deleting any
+ associated temporary disk file. Although this storage will be deleted
+ automatically when the <code>FileItem</code> instance is garbage
+ collected, this method can be used to ensure that this is done at an
+ earlier time, thus preserving system resources.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#delete()">delete</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFieldName()"><!-- --></A><H3>
+getFieldName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>getFieldName</B>()</PRE>
+<DL>
+<DD>Returns the name of the field in the multipart form corresponding to
+ this file item.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getFieldName()">getFieldName</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The name of the form field.<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#setFieldName(java.lang.String)"><CODE>setFieldName(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFieldName(java.lang.String)"><!-- --></A><H3>
+setFieldName</H3>
+<PRE>
+public void <B>setFieldName</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A>&nbsp;fieldName)</PRE>
+<DL>
+<DD>Sets the field name used to reference this file item.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#setFieldName(java.lang.String)">setFieldName</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>fieldName</CODE> - The name of the form field.<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#getFieldName()"><CODE>getFieldName()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isFormField()"><!-- --></A><H3>
+isFormField</H3>
+<PRE>
+public boolean <B>isFormField</B>()</PRE>
+<DL>
+<DD>Determines whether or not a <code>FileItem</code> instance represents
+ a simple form field.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#isFormField()">isFormField</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the instance represents a simple form
+         field; <code>false</code> if it represents an uploaded file.<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#setFormField(boolean)"><CODE>setFormField(boolean)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFormField(boolean)"><!-- --></A><H3>
+setFormField</H3>
+<PRE>
+public void <B>setFormField</B>(boolean&nbsp;state)</PRE>
+<DL>
+<DD>Specifies whether or not a <code>FileItem</code> instance represents
+ a simple form field.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#setFormField(boolean)">setFormField</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>state</CODE> - <code>true</code> if the instance represents a simple form
+              field; <code>false</code> if it represents an uploaded file.<DT><B>See Also:</B><DD><A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItem.html#isFormField()"><CODE>isFormField()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutputStream()"><!-- --></A><H3>
+getOutputStream</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html" title="class or interface in java.io">OutputStream</A> <B>getOutputStream</B>()
+                             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns an <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html" title="class or interface in java.io"><CODE>OutputStream</CODE></A> that can
+ be used for storing the contents of the file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html#getOutputStream()">getOutputStream</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItem.html" title="interface in org.apache.commons.fileupload">FileItem</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/OutputStream.html" title="class or interface in java.io"><CODE>OutputStream</CODE></A> that can be used
+         for storing the contensts of the file.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html" title="class or interface in java.io">IOException</A></CODE> - if an error occurs.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStoreLocation()"><!-- --></A><H3>
+getStoreLocation</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A> <B>getStoreLocation</B>()</PRE>
+<DL>
+<DD>Returns the <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> object for the <code>FileItem</code>'s
+ data's temporary location on the disk. Note that for
+ <code>FileItem</code>s that have their data stored in memory,
+ this method will return <code>null</code>. When handling large
+ files, you can use <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html#renameTo(java.io.File)" title="class or interface in java.io"><CODE>File.renameTo(java.io.File)</CODE></A> to
+ move the file to new location without copying the data, if the
+ source and destination locations reside within the same logical
+ volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The data file, or <code>null</code> if the data is stored in
+         memory.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()</PRE>
+<DL>
+<DD>Removes the file contents from the temporary storage.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTempFile()"><!-- --></A><H3>
+getTempFile</H3>
+<PRE>
+protected <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io">File</A> <B>getTempFile</B>()</PRE>
+<DL>
+<DD>Creates and returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> representing a uniquely
+ named temporary file in the configured repository path. The lifetime of
+ the file is tied to the lifetime of the <code>FileItem</code> instance;
+ the file will be deleted when the instance is garbage collected.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/File.html" title="class or interface in java.io"><CODE>File</CODE></A> to be used for temporary storage.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>Returns a string representation of this object.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a string representation of this object.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHeaders()"><!-- --></A><H3>
+getHeaders</H3>
+<PRE>
+public <A HREF="../../../../../org/apache/commons/fileupload/FileItemHeaders.html" title="interface in org.apache.commons.fileupload">FileItemHeaders</A> <B>getHeaders</B>()</PRE>
+<DL>
+<DD>Returns the file item headers.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItemHeadersSupport.html#getHeaders()">getHeaders</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItemHeadersSupport.html" title="interface in org.apache.commons.fileupload">FileItemHeadersSupport</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The file items headers.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHeaders(org.apache.commons.fileupload.FileItemHeaders)"><!-- --></A><H3>
+setHeaders</H3>
+<PRE>
+public void <B>setHeaders</B>(<A HREF="../../../../../org/apache/commons/fileupload/FileItemHeaders.html" title="interface in org.apache.commons.fileupload">FileItemHeaders</A>&nbsp;pHeaders)</PRE>
+<DL>
+<DD>Sets the file item headers.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItemHeadersSupport.html#setHeaders(org.apache.commons.fileupload.FileItemHeaders)">setHeaders</A></CODE> in interface <CODE><A HREF="../../../../../org/apache/commons/fileupload/FileItemHeadersSupport.html" title="interface in org.apache.commons.fileupload">FileItemHeadersSupport</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pHeaders</CODE> - The file items headers.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DiskFileItem.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../org/apache/commons/fileupload/disk/DiskFileItemFactory.html" title="class in org.apache.commons.fileupload.disk"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?org/apache/commons/fileupload/disk/DiskFileItem.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DiskFileItem.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+Copyright &#169; 2002&#x2013;2014 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.
+</BODY>
+</HTML>

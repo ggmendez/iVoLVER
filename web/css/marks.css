@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'markIcons';
+	src:url('fonts/markIcons.eot?-cn0wy6');
+	src:url('fonts/markIcons.eot?#iefix-cn0wy6') format('embedded-opentype'),
+		url('fonts/markIcons.ttf?-cn0wy6') format('truetype'),
+		url('fonts/markIcons.woff?-cn0wy6') format('woff'),
+		url('fonts/markIcons.svg?-cn0wy6#markIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="mark-"], [class*=" mark-"] {
+	font-family: 'markIcons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+    font-size: 25px;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.mark-filled:before {
+	content: "\e600";
+}
+.mark-fatfont:before {
+	content: "\e1400";
+}
+.mark-svg:before {
+	content: "\e1401";
+}
+.mark-path:before {
+	content: "\e1402";
+}
+.mark-HorizontalRectangle:before {
+	content: "\e1403";
+}
+.mark-rectangle:before {
+	content: "\e1404";
+}
+.mark-ellipse:before {
+	content: "\e1405";
+}
+.mark-circle:before {
+	content: "\e1406";
+}
+.mark-square:before {
+	content: "\e1407";
+}
+.mark-pathMark:before {
+	content: "\e1408";
+}

@@ -1,0 +1,31 @@
+.upload {
+  display: inline-block;
+  position: relative;
+  cursor: hand;
+}
+
+.upload input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0; right:0; bottom:0;
+}
+
+.upload:hover  .btn,
+.upload:active .btn {
+  background-color: #3276B1;
+  border-color: #285E8E;
+}
+
+.upload:active .btn,
+.upload:focus  .btn {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+body {
+  /* Just a bit of spacing for the control */
+  padding: 20px;
+}
+
+.has-error {
+  background: red;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+         <link href="css/jquery.fileChooser.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <span class="upload">
+            <input type="file" name="files" multiple accept="text/csv">
+            <button class="btn btn-primary btn-lg">Select Files</button>
+            <span class="files"></span>
+            <span class="help"></span>
+        </span>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/jquery.fileChooser.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.upload').fileChooser({
+                  fileSelector: 'input[type="file"]',
+                  fileLabelSelector: '.files',
+                  helpBlockSelector: '.help'
+                });
+            });
+        </script>
+    </body>
+</html>
