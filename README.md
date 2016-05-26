@@ -16,30 +16,29 @@ Aside from the tool, which is web-based and designed for pen and touch, we contr
 
 iVoLVER source code is available under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
 
-The code is organized as a <a href="https://netbeans.org" target="_blank">Netbeans</a> project that includes
+The code is organized as a <a href="https://netbeans.org" target="_blank">Netbeans</a> project that includes:
 
-- The **iVoLVER web client** (HTML + JavaScript) that implements the user interface using the following libraries:
+- **1. The iVoLVER web client** (HTML + JavaScript) that implements the user interface using the following libraries:
   - <a href="http://fabricjs.com" target="_blank">fabric.js</a> for the rendering of the canvas elements,
-  - <a href="http://hammerjs.github.io" target="_blank">hammer.js</a> for additional support for touch gestures,
+  - <a href="http://hammerjs.github.io" target="_blank">hammer.js</a> for additional touch gestures support,
   - <a href="http://momentjs.com/" target="_blank">moment.js</a> to parse, validate, manipulate, and display dates in JavaScript,
   - The <a href="https://github.com/bjornharrtell/jsts" target="_blank">JavaScript Topology Suite</a> for processing geometry,
+  - <a href="https://github.com/josdejong/mathjs" target="_blank">Math.js</a> for mathematical functions and expression parsing,
   - <a href="http://mourner.github.io/simplify-js" target="_blank">simplify.js</a> for polyline simplification,
   - <a href="http://iamceege.github.io/tooltipster" target="_blank">tooltipster.js</a> to create tooltips enhanced with CSS,
-  - <a href="http://papaparse.com/" target="_blank">Papa Parse</a> an in-browser CSV parser,
+  - <a href="http://papaparse.com/" target="_blank">Papa Parse</a> to in-browser parse CSV files,
   - <a href="https://github.com/eligrey/FileSaver.js" target="_blank">FileSaver.js</a>, which implements the saveAs() FileSaver interface in browsers that do not natively support it,
   - <a href="http://colormix.florentschildknecht.com" target="_blank">colormix.js</a> for mixing, blending and easily manipulating colors and color spaces,
   - <a href=https://github.com/aurer/jsgradient" target="_blank">jsgradient.js</a> to implement a gradient between two colors,
-  - <a href="https://github.com/josdejong/mathjs" target="_blank">Math.js</a> for mathematical functions and expression parsing,
   - <a href="http://fabien-d.github.com/alertify.js" target="_blank">alertify.js</a> for customized dialogs,
 
-- The **Image processing server program** (mostly implemented under `src/java/classes`), with the computer vision routines that recognize text and extract data from images. This modules uses the following dependencies:
-  - The Java wrappers of the <a href="http://opencv.org" target="_blank">OpenCV library</a> (version 2.4.9)
-  - The <a href="http://tess4j.sourceforge.net" target="_blank">Tess4J</a> library, a Java JNA wrapper for the <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract OCR API</a>
+- **2. The Image processing server program** (mostly implemented under `src/java/classes`), with the computer vision routines that recognize text and extract data from images. This module is written in Java and uses the following dependencies:
+  - Java wrappers of the <a href="http://opencv.org" target="_blank">OpenCV library</a> (version 2.4.9), and
+  - The <a href="http://tess4j.sourceforge.net" target="_blank">Tess4J</a> library, a JNA wrapper for the <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract OCR API</a>
 
 Communication between the client and the server is achieved through Java servlets (included in `src/java/servlets`).
 
-
-### Working with the code
+### Using/extending the source code
 
 If you have 
 
