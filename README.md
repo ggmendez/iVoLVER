@@ -38,8 +38,25 @@ The code is organized as a <a href="https://netbeans.org" target="_blank">Netbea
 
 Communication between the client and the server is achieved through Java servlets (included in `src/java/servlets`).
 
-### Using/extending the source code
+### Running iVoLVER from the source code
 
-If you have 
+The easies way to depploy the iVoLVER is from Netbeans, by opening the root directory as a Netbeans project. 
+
+##### Configuring OpenCV
+
+You will have to modify the `OpenCVLoader` class in `src/java/classes` to load to the right OpenCV DLL file. If you have added the DLL to your PATH, you could use:
+```java
+    System.loadLibrary( Core.NATIVE_LIBRARY_NAME );
+```
+
+Otherwise, you will need to use the `System.load` method specifying the full path to the DLL file:
+```java
+    String OpenCV_DLL_Path = <absolute_path_to_your_DLL_file>;
+    System.load(OpenCV_DLL_Path);
+```
+
+##### Configuring the text recognition module
+
+public static final String tessdata = "C:\\Users\\Gonzalo\\Documents\\NetBeansProjects\\iVoLVER\\tessdata";
 
 
