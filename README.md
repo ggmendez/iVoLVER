@@ -1,7 +1,7 @@
 # iVoLVER
 
 <p align="center">
-  <a target="_blank" href="http://www.youtube.com/watch?v=wnJ80cEKKxo"><img src="http://img.youtube.com/vi/wnJ80cEKKxo/0.jpg"></a>
+  <a href="http://www.youtube.com/watch?v=wnJ80cEKKxo" target="_blank"><img src="http://img.youtube.com/vi/wnJ80cEKKxo/0.jpg"></a>
 </p>
 
 iVoLVER is a tool that allows users to create visualizations without textual programming. It is designed to enable **flexible acquisition of many types of data** (text, colors, shapes, quantities, dates) from multiple source types (bitmap charts, webpages, photographs, SVGs, CSV files) and, within the same canvas, supports transformation of that data through simple widgets to construct interactive animated visuals.
