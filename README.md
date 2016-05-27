@@ -10,7 +10,7 @@ iVoLVER is a tool that allows users to create visualizations without textual pro
 
 Aside from the tool, which is web-based and designed for pen and touch, we contribute the design of the interactive visual language and widgets for extraction, transformation, and representation of data. We demonstrate the flexibility and expressive power of the tool through a set of scenarios, and discuss some of the challenges encountered and how the tool fits within the current infovis tool landscape.
 
-### Scenarios
+# Demos
 
 <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/1.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank" data-keyboard="true" data-toggle="modal"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/2.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/3.png" width="24%"></a>   <a href="http://ivolver.cs.st-andrews.ac.uk/#scenario" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/scenarios/pngs/4.png" width="24%"></a>
 
