@@ -1,12 +1,8 @@
 # iVoLVER
 
-<p align="center">
-  <a href="http://www.youtube.com/watch?v=wnJ80cEKKxo" target="_blank"><img src="http://img.youtube.com/vi/wnJ80cEKKxo/0.jpg"></a>
-</p>
+<a href="http://ivolver.cs.st-andrews.ac.uk" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/teaser.png" style="width:300px;box-shadow:rgba(0,0,0,0.3) 0 0 5px"></a>
 
 iVoLVER is a tool that allows users to create visualizations without textual programming. It is designed to enable **flexible acquisition of many types of data** (text, colors, shapes, quantities, dates) from multiple source types (bitmap charts, webpages, photographs, SVGs, CSV files) and, within the same canvas, supports transformation of that data through simple widgets to construct interactive animated visuals.
-
-<a href="http://ivolver.cs.st-andrews.ac.uk" target="_blank"><img src="http://ivolver.cs.st-andrews.ac.uk/img/teaser.png" style="width:300px;box-shadow:rgba(0,0,0,0.3) 0 0 5px"></a>
 
 Aside from the tool, which is web-based and designed for pen and touch, we contribute the design of the interactive visual language and widgets for extraction, transformation, and representation of data. We demonstrate the flexibility and expressive power of the tool through a set of scenarios, and discuss some of the challenges encountered and how the tool fits within the current infovis tool landscape.
 
